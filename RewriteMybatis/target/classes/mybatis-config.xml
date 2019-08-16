@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <!-- <properties>
+        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/liuzx"/>
+        <property name="username" value="root"/>
+        <property name="password" value="123456"/>
+    </properties> -->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+            <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        	<property name="url" value="jdbc:mysql://127.0.0.1:3306/liuzx"/>
+            <property name="username" value="root"/>
+            <property name="password" value="123456"/>
+            </dataSource>
+        </environment>
+        <!-- <environment id="test">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+            <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        	<property name="url" value="jdbc:mysql://localhost:3306/liuzx1"/>
+            <property name="username" value="root"/>
+            <property name="password" value="123456"/>
+            </dataSource>
+        </environment> -->
+    </environments>
+    <mappers>
+        <!-- <package name="com.lzx.mapper"/> -->
+        <mapper resource="mybatis/UserMapper.xml"/>
+        <!-- <mapper url="file:///E:/launspace/RewriteMybatis/src/main/resources/mybatis/mappers/UserMapper.xml" /> -->
+        <!--<mapper class="com.xm.mapper.UserMapper"/>-->
+    </mappers>
+</configuration>

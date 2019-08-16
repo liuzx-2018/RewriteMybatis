@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- namespace 当基于XML进行配置的时候是根据namespace+id来拼接进行SQL操作 -->
+<mapper namespace="com.lzx.mapper.UserMapper">
+    <select id="getUserById" resultType="com.lzx.bean.User">
+        select * from user where id = ?
+    </select>
+</mapper>
